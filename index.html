@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Drift Detection Between Two Files</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>Data Drift Detection Between Two Files</h1>
+
+    <div class="file-upload-container">
+        <label for="file-upload-1">Upload First Excel File: </label>
+        <input type="file" id="file-upload-1" accept=".xls,.xlsx">
+    </div>
+
+    <div class="file-upload-container">
+        <label for="file-upload-2">Upload Second Excel File: </label>
+        <input type="file" id="file-upload-2" accept=".xls,.xlsx">
+    </div>
+
+    <button onclick="detectDataDrift()">Detect Data Drift</button>
+
+    <div id="drift-status">Data Drift Status: <span id="status">No Drift Detected</span></div>
+    <div id="drift-info">Upload two Excel files to analyze and compare them for data drift.</div>
+
+    <div class="chart-container">
+        <canvas id="driftChart"></canvas>
+    </div>
+
+    <div id="data-table-container"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.17.5/dist/xlsx.full.min.js"></script>
+<script src="https://cdn
